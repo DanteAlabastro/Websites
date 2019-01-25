@@ -51,35 +51,42 @@ header h1{
 	color: #333333;
 }
 
-#intro{
-  position: relative;
-	background-color: white;
-  height: 80vh;
-}
-/* I should use object boxes here */
+/* Icons "Info" */
 
-#intro .text{
-  position: inherit;
-  padding: 20px;
-}
+  .grid-container {
+	  display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 67% 33%;
+	  background-color: white;
+    height: 80vh;
+    padding-top: 20px;
 
-#intro .images{
-  position: inherit;
-  display: -webkit-flex; /* Safari */
-  -webkit-justify-content: space-around; /* Safari 6.1+ */
-  display: flex;
-  justify-content: space-around;
-  height: inherit;
-}
-/* Device Icons */
+  }
+  
+  .grid-container > div {
+    background-color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
 
-#intro svg{
-  position: relative;
-}
+  .item1, .item2, .item3 {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    justify-content: center;
+  }
 
-.screen{
-  fill:#576E78;
-}
+  .item4 {
+    grid-column: 1 / span 3;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    line-height: 10px;
+  }
+  
+  .item4 h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+  }
 
 /* Return Top Button */
 
@@ -164,19 +171,19 @@ table td:nth-child(2){
 	font-size:30px;
 }
 .button {
-    background-color: LightSteelBlue;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-	font-weight: bold;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
+  background-color: LightSteelBlue;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .button1 {
@@ -207,7 +214,15 @@ footer{
 	line-height: 2;
 }
 #info a{
-	color: black;
+  color: black;  
+}
+
+.email-box{
+  background: #ebebeb;
+  border: 1px solid rgb(160, 160, 160);
+	border-radius: 8px;
+  width: 45%;
+  margin: auto;
 }
 /* Scroll Top button */
 
@@ -376,4 +391,33 @@ footer{
     -webkit-transform: translate3d(0, -25%, 0);
             transform: translate3d(0, -25%, 0);
   }
+}
+
+/* Footer */
+
+address > a {
+  font-size: 17px;
+  text-decoration: none;
+  color:rgb(91, 109, 109);
+}
+
+address {
+  padding-bottom: 20px;
+  color:rgb(91, 109, 109);
+}
+
+.citation > a {
+  text-decoration: none;
+  color:  rgb(197, 197, 255);
+}
+
+.citation {
+  text-align: right;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-stretch: ultra-condensed;
+  letter-spacing: -1;
+  padding-right: 10px;
+  font-size: 10px;
+  color:rgb(197, 197, 255);
 }
