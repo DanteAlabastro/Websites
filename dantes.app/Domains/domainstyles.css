@@ -52,9 +52,36 @@ header h1{
 }
 
 #intro{
+  position: relative;
 	background-color: white;
-	height: 80vh;
+  height: 80vh;
 }
+/* I should use object boxes here */
+
+#intro .text{
+  position: inherit;
+  padding: 20px;
+}
+
+#intro .images{
+  position: inherit;
+  display: -webkit-flex; /* Safari */
+  -webkit-justify-content: space-around; /* Safari 6.1+ */
+  display: flex;
+  justify-content: space-around;
+  height: inherit;
+}
+/* Device Icons */
+
+#intro svg{
+  position: relative;
+}
+
+.screen{
+  fill:#576E78;
+}
+
+/* Return Top Button */
 
 #return-top{
 	width: 40px;
@@ -63,6 +90,8 @@ header h1{
 	background-color: #333;
 	border-radius: 15px;
 }
+
+/* Table */
 
 #table p{
 	font-family: 'Roboto', sans-serif;
