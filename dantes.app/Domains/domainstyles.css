@@ -162,7 +162,7 @@ table td:nth-child(2){
 
   .grid-container2 {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     background-color: white;
     align-content: start;
     justify-content: center;
@@ -175,16 +175,34 @@ table td:nth-child(2){
     background-color: #C0E4F8;
     text-align: center;
     font-size: 24px;
-    padding: 88px 10px;
+    padding: 78px 10px;
     width: 200px;
+    display: block;
+    font-family: 'Open sans';
+    transition: transform 0.5s;
+    -webkit-transition: -webkit-transform 0.5s; /* Safari */
   }
 
-.grid-container2 h4 {
-    display: block;
-    text-align: center;
+  .grid-container2 > div:hover {
+    animation-name: color-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    transform: translate(0, -30px);
+    -webkit-transform: translate(0, -30px); /* Safari */
+  }
+/* The animation code */
+  @keyframes color-change {
+    from {background-color: #C0E4F8; color: black;}
+    to {background-color:rgba(192, 228, 248, 0.3); color: grey;}
 }
 
-#container {
+  #domains div:after {
+    content: ".app";
+    display: block;
+    font-family: 'Raleway';
+  }
+
+  #container {
 	border: 3px solid black;
 	border-radius: 50px;
 	width: 40%;
