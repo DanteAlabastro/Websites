@@ -19,7 +19,7 @@ header{
 	margin: 0;
 	min-width: 100%;
 	position: fixed;
-	z-index:1;
+	z-index: 5;
 	background-color:rgba(150, 172, 184, 0.7);
 	box-shadow: 0 5px 40px 5px rgba(0, 0, 0, 0.3);
 }
@@ -57,7 +57,7 @@ header h1{
 	  display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: 67% 33%;
-	  background-color: white;
+      background-color: white;
     height: 80vh;
     padding-top: 20px;
 
@@ -69,20 +69,20 @@ header h1{
     padding: 20px 0;
   }
 
-  .item1, .item2, .item3 {
+  .grid-container > .item1, .item2, .item3 {
     display: -webkit-flex; /* Safari */
     display: flex;
     justify-content: center;
   }
 
-  .item4 {
+  .grid-container > .item4 {
     grid-column: 1 / span 3;
     font-family: 'Open Sans', sans-serif;
     font-size: 24px;
-    line-height: 20px;
+    line-height: 26px;
   }
   
-  .item4 h1{
+  .grid-container > .item4 h1{
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 40px;
@@ -101,60 +101,79 @@ header h1{
 /* Table */
 
 #table p{
-	font-family: 'Roboto', sans-serif;
-}
-
-table{
-	margin: auto;
-	border-collapse: collapse;
-	width: 85%;
-	background-color: white;
-}
-th{
-	border-right: 3px solid white;
-	border-left:  3px solid white;
-}
-table tr td:first-child a{
-	visibility: visible;
-	text-decoration: none;
-	color: black;
-}
-table tr td:nth-child(3) a{
-	visibility: hidden;
-	color: white;
-	text-decoration:none;
-}
-table tr:hover a:nth-child(n){
-	visibility: visible;
-}
-table tr:nth-child(even){
-	background-color: #f2f2f2;
-}
-table tr:not(:first-child):hover{
-	background-color: LightGrey;
-}
-
-#table{
-	margin: 30px auto 60px auto;
-	width: 65%;
+  font-family: 'Roboto', sans-serif;
+  width: 400px;
 	border: 3px solid black;
 	border-radius: 20px;
-	background: white;
+  background: white;
+  margin: 100px auto;
+  padding: 20px;
 }
-th, td {
-	padding: 10px 10px 10px 15px;
-	text-align: left;
-	font-family: 'Roboto', sans-serif;
+
+#table {
+  height: 200px;
 }
-td {
-	font-size: 18px;
+
+/* Domains Grid */
+
+  .grid-container2 {
+    display: grid;
+    height: auto;
+    grid-template-columns: auto auto auto;
+    background-color: white;
+    align-content: start;
+    justify-content: center;
+    grid-gap: 40px;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .grid-container2 div{
+    background-color: #C0E4F8;
+    text-align: center;
+    font-size: 24px;
+    padding: 78px 10px;
+    width: 200px;
+    display: block;
+    font-family: 'Open sans';
+    transition: transform 0.5s;
+    -webkit-transition: -webkit-transform 0.5s; /* Safari */
+  }
+
+  .grid-container2 div:hover {
+    animation-name: color-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    transform: translate(0, -30px);
+    -webkit-transform: translate(0, -30px); /* Safari */
+  }
+
+  #domains a{
+    text-decoration: none;
+    color: black;
+  }
+
+/*  #domains a:after{
+    content: 'contact';
+    position: relative;
+    text-align: center;
+    bottom: 20px;
+    z-index: 0;
+  }
+ */ 
+/* The animation code */
+  @keyframes color-change {
+    from {background-color: #C0E4F8; color: black;}
+    to {background-color:rgba(192, 228, 248, 0.3); color: grey;}
 }
-table td:nth-child(2){
-	font-style: italic;
-	font-size: 14px;
-	color: #474747;
-}
-#container {
+
+  #domains div:after {
+    content: ".app";
+    display: block;
+    font-family: 'Raleway';
+  }
+
+  #container {
 	border: 3px solid black;
 	border-radius: 50px;
 	width: 40%;
@@ -227,7 +246,7 @@ footer{
 /* Scroll Top button */
 
 .to-top { 	
-	position: fixed; 
+  position: fixed;
 	bottom: 20; 
 	right: 80; 
   text-decoration: none;
