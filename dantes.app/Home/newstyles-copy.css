@@ -25,6 +25,11 @@ header h3{
 	padding-left: 10vw;
 	font-size: 34px;
 	margin: 0px;
+	color: black;
+}
+
+header a:link, a:visited{
+	text-decoration: none;
 }
 
 header p{
@@ -32,6 +37,7 @@ header p{
 	padding-left: 10vw;
 	font-size: 28px;
 	margin: 0px;
+	color: black;
 }
 
 div.topography a:link, a:visited{
@@ -41,7 +47,7 @@ div.topography a:link, a:visited{
 
 
 div.topography #links{
-	position: absolute;
+	position: relative;
 	padding-left: 10vw;
 	padding-top: 200px;
 	color: #ecece7;
@@ -58,6 +64,23 @@ div.topography #links ul{
 	padding-left: 60px;
 }
 
+div.topography #contact-links ul{
+	list-style-type: none;
+	font-size: 20px;
+	padding-left: 2em;
+	line-height: 2em;
+}
+
+div.topography #contact-links{
+	position: relative;
+	padding-left: 10vw;
+	padding-top: 200px;
+	color: #ecece7;
+	font-size: 28px;
+	font-family: "Source Code Pro", monospace;
+	text-align: left;
+	line-height: 2em;
+}
 div.topography #links ul > ul{
 	list-style-type: circle;
 	font-size: 16px;
@@ -68,8 +91,8 @@ div.topography #links ul > ul{
 
 div.topography #resume_text{
 	position: relative;
-	padding-left: 10vw;
-	padding-top: 200px;
+	padding: 10vw;
+	padding-top: 10vh;
 	color: #ecece7;
 	font-size: 28px;
 	font-family: "Source Code Pro", monospace;
@@ -79,17 +102,18 @@ div.topography #resume_text{
 
 div.topography #resume_text div{
 	font-size: 22px;
-	padding-bottom: 80px;
+	padding-bottom: 20vh;
 }
 
 div.topography #footer{
-	position: absolute;
+	position: relative;
+	padding-top: 33vh;
+	padding-left: 10vw;
+	padding-bottom: 20px;
 	color: #ecece7;
-	font-size: 18px;
+	font-size: 16px;
 	font-family: monospace;
 	text-align: left;
-	bottom: 20px;
-	left: 10vw;
 }
 
 div.topography{
